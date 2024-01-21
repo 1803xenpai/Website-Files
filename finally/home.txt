@@ -1,0 +1,104 @@
+ 
+
+echo "<DOCTYPE.html>";
+            echo"<html>";
+            echo"<head>";
+            
+            echo "<title>Welcome to AniList!!!</title>";
+            echo "</head>";
+            echo "<body>";
+            echo"<header>";
+             echo"<label id='dark-change'></label>";
+            echo "<header>";
+            echo "<main>";
+             echo "<h1>Easy Dark Mode</h1>";
+             echo "<div id='respon'>";
+               echo "<img src='https://i.ebayimg.com/images/g/-icAAOSwhOVjHtvh/s-l1200.jpg'>";
+               echo "<p>A story of gusvbcaidygiwjdb uwgdciwud ycbbwoweyc uicwbcubc </p>";
+             echo "</div>";
+            echo "<main>";
+            echo"<script src='home.js'></script>";
+
+            echo "</body>";
+
+            echo"</html>";
+
+
+home.css
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+main{
+    margin: 5vh 15%;
+}
+h1{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+img{
+    width: 50%;
+    height: auto;
+}
+p{
+    text-align: justify;
+    font-size: 18px;
+}
+label{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+label::before{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgb(29, 29, 29);
+    transition: 0.4s;
+}
+label.active:before{
+    left: 24px;
+    background: white;
+}
+body.night{
+    background: rgb(29, 29, 29);
+    color: white;
+}
+
+
+
+
+
+
+
+home.js
+
+
+
+
+var content = document.getElementsByTagName('body')[0]
+var darkMode = document.getElementById('dark-change')
+darkMode.addEventListener('click', function(){
+    darkMode.classList.toggle('active')
+    content.classList.toggle('night')
+})
